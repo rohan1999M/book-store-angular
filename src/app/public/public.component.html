@@ -1,0 +1,10 @@
+<div>
+    <nav>
+        <a routerLink="/public/all-books">All Books</a>
+        <a [routerLink]="['book-details', bookId ,'author',authorId]">Book Details</a>
+        <!-- <a routerLink="/auth/login">Login</a> -->
+    </nav>
+</div>
+<div>
+<router-outlet></router-outlet>
+</div>
