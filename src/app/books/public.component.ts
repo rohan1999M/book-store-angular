@@ -15,7 +15,7 @@ export class PublicComponent implements OnInit {
     //   console.log(parm)
     // })
   }
-  bookId = 1;
-  authorId = 'rohan01';
+  // bookId = 1;
+  // authorId = 'rohan01';
 
 }
