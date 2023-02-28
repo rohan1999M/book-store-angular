@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from '../HomePage/home/home.component';
 import { AllBooksComponent } from './components/all-books/all-books.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { PublicRoutingModule } from './public-routing.module';
