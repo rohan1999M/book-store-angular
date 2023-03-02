@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid black;
+    margin-top: 20px;
+    min-width: 290px;
+    height: 380px;
+    display: inline-block;
+    box-shadow: 1px 1px 4px 0.1px;
+    margin-right: 20px;
+}
+.card-content{
+    // background-color: aqua;
+    height: 340px;
+    width: 250px;
+    margin: 10px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    height: 200px;
+    // margin: 10px;
+}
+

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AuthorsComponent } from './components/authors/authors.component';
 
 
 
@@ -10,13 +11,14 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     NotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AuthorsComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    FooterComponent,HeaderComponent,NotFoundComponent
+    FooterComponent,HeaderComponent,NotFoundComponent,AuthorsComponent
   ]
 })
 export class SharedModule { }

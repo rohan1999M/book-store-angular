@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="card" *ngFor="let book of books"> 
+        <div class="card-content">
+            <div class="card-image">
+                <img src="{{book.image}}">
+            </div>
+            <span class="card-title">{{book.title}}</span>
+            <div class="card-text" >
+                <p>{{book._author}}</p>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Image by <a href="https://pixabay.com/users/moonzigg-6341937/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2715461" style="text-decoration: none">moonzigg</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2715461" style="text-decoration: none">Pixabay</a>  
+                </p>
+                <button type="button">Buy at :{{book.price.value}}</button>
+            </div>
+        </div>
+    </div>
+</div>
