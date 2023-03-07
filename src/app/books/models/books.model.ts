@@ -5,15 +5,17 @@ export class BookModel{
     image!: string;
     title!: string;
     totalPages!: number;
-    _author!: string;
+    published:Boolean = false;
+    author!: string;
     price!: PriceModel;
+   
 
-    public set author(value:string){
-      this._author = 'Author: '+ value;
-    }
-    public get author(){
-        return this._author;
-    }
+    // public set author(value:string){
+    //   this._author = 'Author: '+ value;
+    // }
+    // public get author(){
+    //     return this._author;
+    // }
 
 
 

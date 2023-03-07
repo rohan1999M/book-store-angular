@@ -6,6 +6,11 @@ import { PublicRoutingModule } from './public-routing.module';
 import { PublicComponent } from './public.component';
 import { RecentBooksComponent } from './components/recent-books/recent-books.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { FormsModule } from '@angular/forms';
+
+
+
 
 
 
@@ -15,10 +20,11 @@ import { BookCardComponent } from './components/book-card/book-card.component';
     BookDetailsComponent,
     PublicComponent,
     RecentBooksComponent,
-    BookCardComponent
+    BookCardComponent,
+    AddBookComponent
   ],
   imports: [
-    PublicRoutingModule,CommonModule
+    PublicRoutingModule,CommonModule,FormsModule,
   ]
 })
 export class PublicModule { }

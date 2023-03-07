@@ -1,0 +1,43 @@
+<!-- <p>add-book works!</p> -->
+
+  <form #myForm="ngForm" (ngSubmit)="addBook()">
+     
+    <div class="mb-3">
+        <label class="form-label" required>Title</label>
+        <input type="text" class="form-control" placeholder="title" name="title" #bookTitle="ngModel" [(ngModel)]="this.model.title" required maxlength="10" minlength="3">
+        <p [hidden]="bookTitle.valid">Please enter book title</p>
+    
+    </div>
+        
+        <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" class="form-control" placeholder="author name"  #author="ngModel" name="author"[(ngModel)]="this.model.author" required maxlength="10" minlength="3">
+        <p [hidden]="author.valid">Please enter author name</p>
+    
+    </div>
+        
+        <div class="mb-3">
+          <label class="form-label">Total Pages</label>
+          <input type="text" class="form-control" placeholder=" no of pages" #total="ngModel" name="totalPages" [(ngModel)]="this.model.totalPages" required maxlength="1000" minlength="5">
+          <p [hidden]="total.valid">not more than 1000 pages</p>
+    
+    </div>
+        
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input type="text" class="form-control" #price="ngModel" placeholder="price" name="price" [(ngModel)]="this.model.price.value" required>
+          <p [hidden]="price.valid">Please enter price</p>
+    
+    </div>
+        
+        <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" name="Published" [(ngModel)]="this.model.published">
+        <label class="form-check-label">Published</label>
+    
+    </div>
+        
+        <div class="btnClass">
+         <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Add</button>
+    
+    </div>
+      </form>

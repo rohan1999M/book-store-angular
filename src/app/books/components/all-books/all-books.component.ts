@@ -9,23 +9,20 @@ import { BookService } from '../../Services/book.service';
 })
 export class AllBooksComponent implements OnInit {
     BookData:BookModel[]=[];
+    // BookData:any[]=[]
   constructor(public bookServices:BookService) { }
 
   ngOnInit(): void {
-    const allBook = this.bookServices.getBookData();
-    allBook.forEach(item=>{
-      var obj = new BookModel();
-      obj.id = item.id;
-      obj.author = item.author;
-      obj.price = item.price;
-      obj.title = item.title;
-      obj.totalPages = item.totalPages;
-      obj.image = item.image;
-      // console.log('from allbook',obj)
-      this.BookData.push(obj);
-    })
-    console.log(this.BookData)
+    this.getBookDataAPI();
   }
-  
+
+  getBookDataAPI():void{
+     console.log('calling api services');
+     this.bookServices.getBook().subscribe(res =>{
+          console.log(res);
+          this.BookData = res;
+          
+     })
+  }
 
 }
